@@ -8,7 +8,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'standard',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'next/core-web-vitals'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -52,7 +53,8 @@ module.exports = {
     'import-helpers/order-imports': ['warn', {
       newlinesBetween: 'always',
       groups: [
-        '/^react/',
+        '/use client/',
+        ['/^react/', '/^next/', '/@next/'],
         '/components/',
         'module',
         '/^@shared/',
